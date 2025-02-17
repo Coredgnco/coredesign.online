@@ -1,0 +1,336 @@
+:root {
+    /* Typography */
+    --font-family: 'Sora', sans-serif;
+    --display-font-size: 80px;
+    --heading-1-size: 64px;
+    --heading-2-size: 48px;
+    --heading-3-size: 32px;
+    --heading-4-size: 24px;
+    --body-l-size: 24px;
+    --body-m-size: 20px;
+    --body-s-size: 18px;
+    --body-xs-size: 16px;
+    --caption-size: 14px;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --line-height-100: 100%;
+    --line-height-120: 120%;
+    --line-height-130: 130%;
+    --line-height-135: 135%;
+    --line-height-140: 140%;
+
+    /* Color */
+    --black: #090A0B;
+    --grey-dark: #6B798A;
+    --grey-medium: #9AA5B1;
+    --grey-light: #F5F7FA;
+
+    /* Spacing */
+    --space-xs: 16px;
+    --space-s: 32px;
+    --space-m: 64px;
+    --space-l: 120px;
+  --space-xl: 240px;
+
+  --logo-height: 32px;
+
+}
+
+.logo-container {
+  display: flex;        /* Flexbox for alignment */
+  align-items: center; /* Center vertically */
+  height: 24px;      /* Set height to match the SVG */
+  padding: 0;         /* Reset padding */
+  margin: 0;          /* Reset margin */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var(--black);
+  font-size: var(--body-m-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0px;
+  margin: 0;
+  color: var(--black);
+}
+
+a {
+  padding: 0; 
+  margin: 0; 
+  line-height: 1; 
+  display: inline-flex; /* or inline-block */
+  align-items: center; /* center content vertically */
+}
+
+p {
+  font-family: inherit; /* Assuming you want to inherit font-family from a parent */
+  margin: 0; /* Reset margin */
+  color: var(--black); /* Apply default color */
+}
+
+/* General typography settings */
+  
+/* Display Style */
+.display {
+  font-size: var(--display-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-120);
+  letter-spacing: -2px;
+  margin: 0;
+  color: var(--black);
+}
+  
+/* Headings */
+.heading-1 {
+  font-size: var(--heading-1-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-120);
+  letter-spacing: -1.5px;
+  margin: 0;
+  color: var(--black);
+}
+  
+.heading-2 {
+    font-size: var(--heading-2-size);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-120);
+    letter-spacing: -1.5px;
+    margin: 0;
+    color: var(--black);
+  }
+  
+  .heading-3 {
+    font-size: var(--heading-3-size);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-120);
+    letter-spacing: -1px;
+  }
+  
+  .heading-4 {
+    font-size: var(--heading-4-size);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-130);
+    letter-spacing: -0.5px;
+    color: var(--black);
+  }
+  
+  /* Body Text */
+  .body-l {
+    font-size: var(--body-l-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-135);
+    letter-spacing: 0.5px;
+    color: var(--black);
+  }
+  
+  .body-m {
+    font-size: var(--body-m-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-140);
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: var(--black);
+  }
+  
+  .body-s {
+    font-size: var(--body-s-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-130);
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: var(--black);
+  }
+
+  .body-xs {
+    font-size: var(--body-ss-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-130);
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: var(--black);
+  }
+  
+  /* Captions */
+  .caption {
+    font-size: var(--caption-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-100);
+    letter-spacing: 0px;
+    margin: 0;
+    color: var(--black);
+  }
+  
+
+  /*Global container class */
+
+  /* Header Navigation */
+  
+  header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Set your desired background */
+    z-index: 1000;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px; /* You can adjust it to fit your design */
+    padding: 32px 64px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px; /* Adjust the gap between links */
+  }
+
+  /* Navigation Link */
+  .nav-link {
+    position: relative;
+    text-decoration: none; /* Remove default underline */
+    font-size: var(--body-s-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-140);
+    letter-spacing: 0px;
+    color: var(--grey-dark);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px; /* Thickness of the underline */
+    background-color: var(--black);
+    transform: translateY(16px); /* Start below the text */
+    opacity: 0; /* Hidden initially */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth transition */
+}
+
+  .nav-link:hover {
+    color: var(--black); /* Change to your desired hover color */
+}
+
+  .nav-link:hover::after {
+    transform: translateY(4px); /* Move to final position */
+    opacity: 1; /* Fade in */
+    color: var(--black);
+}
+
+/* Active State */
+.nav-link.active {
+    color: var(--black); /* Different color for active state */
+}
+
+.nav-link.active::after {
+    transform: translateY(0); /* Ensure underline is shown */
+    opacity: 1; /* Keep it visible */
+}
+
+  .container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  .hero {
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    padding: 160px 64px 240px 64px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .divider {
+    height: 1px;
+    background-color: var(--grey-medium); /* Adjust divider color as needed */
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow responsive wrapping */
+    gap: 32px;
+    margin-top: 64px; /* Space below divider */
+  }
+  
+  .column {
+    flex: 1; /* Distribute space between columns */
+    max-width: 640px; /* Limit width for better readability */
+
+  }
+
+.body-column {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align to the top left */
+  gap: 40px; /* Space between the <p> and the button */
+}
+  
+/* Components */
+
+/* Link Button */
+.link-button {
+  position: relative;
+  background: none; /* No background */
+  border: none; /* No border */
+  padding: 0; /* No padding */
+  color: var(--grey-dark); /* Text color */
+  font-size: var(--body-m-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.link-button .button-text {
+  margin-right: -4px; /* Space between text and arrow in rest state */
+  transition: margin-right 0.4s ease; /* Smooth transition for margin change */
+}
+
+.link-button .arrow {
+  transform: translateX(10px); /* Start off-screen */
+  transition: transform 0.4s ease, margin-left 0.4s ease; /* Slide effect and margin transition */
+}
+
+.link-button::before {
+  content: '';
+  position: absolute;
+  left: 0; /* Start from the left */
+  bottom: -4px; /* Position below the text */
+  width: 100%;
+  height: 1px; /* Thickness of the line */
+  background-color: var(--black); /* Color of the line */
+  transform: scaleX(0); /* Start hidden */
+  transition: transform 0.4s ease; /* Smooth transition */
+}
+
+.link-button:hover::before {
+  transform: scaleX(1); /* Fill the line from left to right */
+}
+
+.link-button:hover .button-text {
+  margin-right: 4px; /* Space between text and arrow on hover */
+}
+
+.link-button:hover .arrow {
+  transform: translateX(0); /* Slide to rest position */
+  margin-left: 8px; /* Adjust margin-left for hover state */
+}
+
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column; /* Stack columns on smaller screens */
+    }
+  }
